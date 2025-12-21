@@ -13,6 +13,6 @@ Iré subiendo aquí todo mi código, ejercicios y pruebas a medida que avance en
 
 >Request: Un navegador envia una solicitud a un servidor. Podemos saber distintos datos que vienen del cliente a nuestro servidor
 
->Responde: Respuesta del servidor a la solicitud del navegador
+>Response: Respuesta del servidor a la solicitud del navegador
 ---
 *Repositorio de Danilo.*
