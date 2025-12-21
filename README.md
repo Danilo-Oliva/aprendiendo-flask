@@ -21,6 +21,8 @@ Iré subiendo aquí todo mi código, ejercicios y pruebas a medida que avance en
 
 >Render_template: Usamos esto para que el return haga el renderizado, le tenemos que pasar el archivo html como primer parametro y como segundo le pasamos el contexto, dicho contexto es la variable que está en el html y esa variable es igual al valor que esta almacenado en el archivo .py. Por eso se hace user_ip = user_ip. Pero la primera siempre debe llamarese como está en el template y la segunda como está en el .py
 
->ciclos en html: Se hace usando corchetes y porcentajes { % if % }, en el else se usa el href="{{url_for{'index} }}" y luego se cierra con un {% endif %}
+>Estructura de decisión en html: Se hace usando corchetes y porcentajes { % if % }, en el else se usa el href="{{url_for{'index} }}" y luego se cierra con un {% endif %}
+
+>Ciclos: Para no ir declarando parametros dentro del render_template, se crea otro contexto diccionario para que contenga todos los parametros. luego para usarlo hay que descomprimirlo con un ** y así no tendremos que poner context.item, context.user_ip, etc,
 ---
 *Repositorio de Danilo.*
