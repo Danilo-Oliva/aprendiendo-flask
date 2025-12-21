@@ -10,5 +10,9 @@ Iré subiendo aquí todo mi código, ejercicios y pruebas a medida que avance en
 >Renderizar: Llenar espacios blancos, por ejemplo un formulario en HTML que espera que el programa le dé el nombre del usuario
 
 >Debugging: ver los errores de forma detallada que ocurrió en nuestro programa. Esto solo se usa en el modo desarrollo, debido a que si algo tira error el debug tira exactamente las líneas de código donde se tiene dicho error
+
+>Request: Un navegador envia una solicitud a un servidor. Podemos saber distintos datos que vienen del cliente a nuestro servidor
+
+>Responde: Respuesta del servidor a la solicitud del navegador
 ---
 *Repositorio de Danilo.*
