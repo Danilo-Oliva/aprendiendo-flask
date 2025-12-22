@@ -6,6 +6,11 @@
   <title>ip_information</title>
 </head>
 <body>
-  <h2>Hola que tal, tu dirección ip es {{user_ip}} </h2>
+  {% if user_ip %}
+    <h2>Hola que tal, tu dirección ip es {{user_ip}} </h2>
+
+  {% else %}+
+    <a href="{{url_for{'index'} }}"> Crear cookie</a>
+  {% endif %}
 </body>
 </html>
