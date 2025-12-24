@@ -32,5 +32,7 @@ Iré subiendo aquí todo mi código, ejercicios y pruebas a medida que avance en
 >Super: Permite llamar al atributo padre y heredar el contenido, no sobreescribirlo
 
 >Macro: Es un HTML que contiene funciones que nos permite renderizar mini-templates para determinadas partes de nuestra interfaz
+
+>Templates estátivos: Son HTML que siempre vamos a usar en todos los demas HTML, por eso es que son estáticos. Por ejemplo la barra de navegación.
 ---
 *Repositorio de Danilo.*
