@@ -23,6 +23,14 @@ Iré subiendo aquí todo mi código, ejercicios y pruebas a medida que avance en
 
 >Estructura de decisión en html: Se hace usando corchetes y porcentajes { % if % }, en el else se usa el href="{{url_for{'index} }}" y luego se cierra con un {% endif %}
 
->Ciclos: Para no ir declarando parametros dentro del render_template, se crea otro contexto diccionario para que contenga todos los parametros. luego para usarlo hay que descomprimirlo con un ** y así no tendremos que poner context.item, context.user_ip, etc,
+>Ciclos: Para no ir declarando parametros dentro del render_template, se crea otro contexto diccionario para que contenga todos los parametros. luego para usarlo hay que descomprimirlo con un ** y así no tendremos que poner context.item, context.user_ip, etc.
+
+>Herencia de Templates: Básicamente es poder crear un *template base* (archivo HTML) que pueda ser reutilizado en otros HTML sin tener que copiar el mismo código.
+
+>Bloques: Jinja maneja bloques, por ende cuando heredemos necesitamos decir que cosas queremos del padre y que cosas del actual deseamos reemplazar o unir del actual HTML.
+
+>Super: Permite llamar al atributo padre y heredar el contenido, no sobreescribirlo
+
+>Macro: Es un HTML que contiene funciones que nos permite renderizar mini-templates para determinadas partes de nuestra interfaz
 ---
 *Repositorio de Danilo.*
