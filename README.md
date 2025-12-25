@@ -34,5 +34,7 @@ Iré subiendo aquí todo mi código, ejercicios y pruebas a medida que avance en
 >Macro: Es un HTML que contiene funciones que nos permite renderizar mini-templates para determinadas partes de nuestra interfaz
 
 >Templates estátivos: Son HTML que siempre vamos a usar en todos los demas HTML, por eso es que son estáticos. Por ejemplo la barra de navegación.
+
+>Archivos estáticos: Son archivos que siempre vamos a usar, por eso van en la carpeta static y adentro pondremos el CSS e imágenes dentro de sus respectivas carpetas.
 ---
 *Repositorio de Danilo.*
