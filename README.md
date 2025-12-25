@@ -36,5 +36,7 @@ Iré subiendo aquí todo mi código, ejercicios y pruebas a medida que avance en
 >Templates estátivos: Son HTML que siempre vamos a usar en todos los demas HTML, por eso es que son estáticos. Por ejemplo la barra de navegación.
 
 >Archivos estáticos: Son archivos que siempre vamos a usar, por eso van en la carpeta static y adentro pondremos el CSS e imágenes dentro de sus respectivas carpetas.
+
+>Manejo de errores: Para manejar errores de forma personalizada (como no encontrar la ruta) usamos *errorhandler(404)*
 ---
 *Repositorio de Danilo.*
