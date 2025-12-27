@@ -49,6 +49,8 @@ Iré subiendo aquí todo mi código, ejercicios y pruebas a medida que avance en
 
 >Formularios: Usamos desde bootstrap/wtf.html el cual renderiza formularios.
 
->Validadores: En wtforms encontramos los validators, en este caso, DataRequired se encarga de que haya información cargada en los campos
+>Validadores: En wtforms encontramos los validators, en este caso, DataRequired se encarga de que haya información cargada en los campos.
+
+>Mensajes Flash: Son mensajes o alertas que son disparadas en el contenido HTML para que un usuario obtenga instrucciones para realizar un determinado proceso. La razón por la cual se usa la clase *alert alert-success alert-dismissible* es para que se cree un boton que quite el mensaje y no se quede renderizado en la pantalla. Dentro de los atributos del boton tendra un data-dismiss y clase close para cerrar. El *&times;* es una forma antigua de hacer un signo por (en este caso es la x de cierre). La ventana no se va a cerrar con ese signo, así que hay que importar los scripts en el base.html
 ---
 *Repositorio de Danilo.*
