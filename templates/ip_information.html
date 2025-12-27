@@ -7,11 +7,14 @@
   {% endblock %}
 
   {% block content %}
-    {% if user_ip %}
-      <h2>Hola que tal, tu dirección ip es {{user_ip}} </h2>
-    {% else %}+
-      <a href="{{url_for('index') }}"> Crear cookie</a>
+    {% if username %}
+    <h1>Bienvenido usuario {{username}} </h1>
     {% endif %}
+  {% if user_ip %}
+      <h2>Hola que tal, tu dirección ip es {{user_ip}} </h2>
+  {% else %}+
+      <a href="{{url_for('index') }}"> Crear cookie</a>
+  {% endif %}
 
     <div class="containter">
         {{wtf.quick_form(login_form)}}
