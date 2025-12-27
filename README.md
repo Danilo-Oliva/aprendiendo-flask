@@ -8,6 +8,8 @@ Mi meta es aprender a crear aplicaciones web con Python usando el framework **Fl
 Iré subiendo aquí todo mi código, ejercicios y pruebas a medida que avance en mi aprendizaje, empezando desde cero.
 
 ## 📝 Notas de mi aprendizaje
+>Requirements: Para poner los requerimientos automáticos usar *pip freeze > requeriments.txt*
+
 >Renderizar: Llenar espacios blancos, por ejemplo un formulario en HTML que espera que el programa le dé el nombre del usuario.
 
 >Debugging: ver los errores de forma detallada que ocurrió en nuestro programa. Esto solo se usa en el modo desarrollo, debido a que si algo tira error el debug tira exactamente las líneas de código donde se tiene dicho error.
@@ -44,5 +46,9 @@ Iré subiendo aquí todo mi código, ejercicios y pruebas a medida que avance en
 >Session: Nos permite guardar de forma encriptada los datos que se almacenan en las cookies. Para que esto sea posible tenemos que configurar un *secret key*. Ya que es necesario para descifrar los datos.Ahora vamos a guardar los datos en una sesión, no en una cookie; Esto nos permite que si alguien modifica la cookie, al recargar la página, vuelva al valor original almacenado.
 
 >Entorno de Flask: Cuando corremos la app, estamos en un servidor de producción. Ahora queremos que el entorno cambie a desarrollo. Exportamos *FLASK_ENV=development* y verificamos con *echo $FLASK_ENV*
+
+>Formularios: Usamos desde bootstrap/wtf.html el cual renderiza formularios.
+
+>Validadores: En wtforms encontramos los validators, en este caso, DataRequired se encarga de que haya información cargada en los campos
 ---
 *Repositorio de Danilo.*
