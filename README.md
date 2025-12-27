@@ -40,5 +40,9 @@ Iré subiendo aquí todo mi código, ejercicios y pruebas a medida que avance en
 >Manejo de errores: Para manejar errores de forma personalizada (como no encontrar la ruta) usamos *errorhandler(404)*
 
 >Bootstrap: Es un framework frontend que nos permite crear interfaces. 
+
+>Session: Nos permite guardar de forma encriptada los datos que se almacenan en las cookies. Para que esto sea posible tenemos que configurar un *secret key*. Ya que es necesario para descifrar los datos.Ahora vamos a guardar los datos en una sesión, no en una cookie; Esto nos permite que si alguien modifica la cookie, al recargar la página, vuelva al valor original almacenado.
+
+>Entorno de Flask: Cuando corremos la app, estamos en un servidor de producción. Ahora queremos que el entorno cambie a desarrollo. Exportamos *FLASK_ENV=development* y verificamos con *echo $FLASK_ENV*
 ---
 *Repositorio de Danilo.*
