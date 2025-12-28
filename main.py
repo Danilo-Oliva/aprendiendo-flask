@@ -31,7 +31,7 @@ def test():
 class LoginForm(FlaskForm):
     username = StringField("Nombre del usuario", validators=[DataRequired()])
     password = PasswordField("Contraseña", validators=[DataRequired()])
-    submit = SubmitField("Enviar datos", validators=[DataRequired()])
+    submit = SubmitField("Enviar datos")
 
 
 @app.errorhandler(404)
