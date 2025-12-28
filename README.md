@@ -16,7 +16,10 @@ Iré subiendo aquí todo mi código, ejercicios y pruebas a medida que avance en
 
 >Request: Un navegador envia una solicitud a un servidor. Podemos saber distintos datos que vienen del cliente a nuestro servidor.
 
->Response: Respuesta del servidor a la solicitud del navegador
+>Remote_addr: Nos sirve para saber de dónde es la IP del cliente. Nos sirve para saver de que país es y mostrarle la página en su idioma, por si intentá entrar a una cuenta 50 veces y le podemos bloquear su IP o por ejemplo si ya votó en una encuesta, no lo dejamos votar de neuvo.
+
+>Response: Respuesta del servidor a la solicitud del navegador.
+
 >Make_response: Nos permite redirigir hacia otra rutas pasando parametros y tambien nos permite crear cookies.
 
 >Cookie: Como HTML no tiene memoria, entonces una cookie es un pequeño archivo de texto que el servidor le envía al navegador del cliente y guarda la info de este mismo para mostrarselo cada vez que vuelva.
@@ -51,6 +54,12 @@ Iré subiendo aquí todo mi código, ejercicios y pruebas a medida que avance en
 
 >Validadores: En wtforms encontramos los validators, en este caso, DataRequired se encarga de que haya información cargada en los campos.
 
->Mensajes Flash: Son mensajes o alertas que son disparadas en el contenido HTML para que un usuario obtenga instrucciones para realizar un determinado proceso. La razón por la cual se usa la clase *alert alert-success alert-dismissible* es para que se cree un boton que quite el mensaje y no se quede renderizado en la pantalla. Dentro de los atributos del boton tendra un data-dismiss y clase close para cerrar. El *&times;* es una forma antigua de hacer un signo por (en este caso es la x de cierre). La ventana no se va a cerrar con ese signo, así que hay que importar los scripts en el base.html
+>Mensajes Flash: Son mensajes o alertas que son disparadas en el contenido HTML para que un usuario obtenga instrucciones para realizar un determinado proceso. La razón por la cual se usa la clase *alert alert-success alert-dismissible* es para que se cree un boton que quite el mensaje y no se quede renderizado en la pantalla. Dentro de los atributos del boton tendra un data-dismiss y clase close para cerrar. El *&times;* es una forma antigua de hacer un signo por (en este caso es la x de cierre). La ventana no se va a cerrar con ese signo, así que hay que importar los scripts en el base.html.
+
+>Test: Nos permiten probar nuestra app antes de salir a producción. *Flask_testing* va  a ser la libreria para hacer los test. Lo que hacemos es analizar los objetos de respuesta (Ej: ver si el endpoint '/index' funciona correctamente). Para eso necesitamos importar unittest, crear un comando propio para usar en consola, definimos la función test, creamos una instancia de unittest, usamos la clase 'TestLoader', la cual necesita el atributo 'discover' y este atributo recibe como parametro la carpeta donde estaran los tests. Para poder hacer los tests, debemos correr el comando *config.bat development main.py*. Esto hace que windows lea el config.bat, agarra la palabra development y lo mete en donde se puse %1, luego agarra la palabra main.py y lo mete en donde se puso %2. Ejecuta los set y muestra el mensaje de confirmación. Para comprobar que funciona ejecutamos el comando *echo %FLASK_APP%* y debe mostrar *main.py*.
+
+>Escribir los tests: Cuando corremos el *flask test* busca en la carpeta test todos los archivos que empiezan con dicha palabra. En el *test_app* vamos a escribir el algoritmo necesario para probar la aplicación web.
+
+>AssertRedirect: Tuve que agregar el *_external=True* debido a que el test busca URLs absolutas, sin el external es relativa
 ---
 *Repositorio de Danilo.*
