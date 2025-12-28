@@ -74,7 +74,7 @@ def show_information():
         username = login_form.username.data
         session["username"] = username
         flash("Nombre de usuario registrado correctamente")
-        return redirect(url_for("index"))
+        return redirect(url_for("index", _external=True))
 
     return render_template("ip_information.html", **context)
 
