@@ -3,12 +3,19 @@ from flask_bootstrap import Bootstrap
 from flask_wtf import FlaskForm
 from wtforms.fields import StringField, PasswordField, SubmitField
 from wtforms.validators import DataRequired
+import unittest
 
 app = Flask(__name__)
 bootstap = Bootstrap(app)
 app.config["SECRET_KEY"] = 'CLAVE SEGURA'
 
 items = ["Arroz", "Huevos", "Café", "Leche"]
+
+#creamos un comando propio de flask para ejecutarlo desde consola
+@app.cli.command()
+def test():
+    tests = unittest.TestLoader().discover("tests")
+    unittest.TextTestRunner().run(tests)
 
 class LoginForm(FlaskForm):
     username = StringField("Nombre del usuario", validators=[DataRequired()])
@@ -56,5 +63,6 @@ def show_information():
         
     return render_template("ip_information.html", **context)
 
-
-app.run(host="0.0.0.0", port=81, debug=True)
+#punto de entrada
+if __name__ == "__main__":
+    app.run(host="0.0.0.0", port=81, debug=True)
