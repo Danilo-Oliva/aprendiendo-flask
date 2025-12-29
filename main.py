@@ -44,25 +44,17 @@ def index():
     return response
 
 
-@app.route("/show_information_address", methods=["GET", "POST"])
+@app.route("/show_information_address")
 def show_information():
     user_ip = session.get("user_ip_information")
     username = session.get("username")
-    login_form = LoginForm()
+
     # creo el diccionario que contendrá todos los parametros del render_template
     context = {
         "user_ip": user_ip,
         "items": items,
-        "login_form": login_form,
         "username": username,
     }
-
-    # validamos
-    if login_form.validate_on_submit():
-        username = login_form.username.data
-        session["username"] = username
-        flash("Nombre de usuario registrado correctamente")
-        return redirect(url_for("index", _external=True))
 
     return render_template("ip_information.html", **context)
 
