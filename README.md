@@ -64,5 +64,8 @@ Iré subiendo aquí todo mi código, ejercicios y pruebas a medida que avance en
 
 >Modularizar: Ahora tenemos todo en el main.py y por ende no es escalable. Entonces vamos a dividir todo para que sea más mantenible en el tiempo. El *__init__.py* significa que es un paquete de python, por eso vamos a poder usar todas las funciones. Esta modularización va a hacer que los tests solo muestren errores, para solucionar esto vamos a mover todas las carpetas de static y templates a la carpeta app.
 
+>Blueprints: Sirve para modularizar nuestras vistas. Lo que hacemos es instanciar la clase Blueprints y le pasamos los siguientes parametros: El nombre del blueprint, que se va a llamar auth, le decimos el nombre del paquete y un prefijo que quiere decir que todas las rutas que sean referenciadas con /auth van a ser redirigidos al blueprint.
+
+>Views: Las vistas son un concepto de rutas, por eso todas las rutas para la funcionalidad del login la vamos a tener en views.py
 ---
 *Repositorio de Danilo.*
