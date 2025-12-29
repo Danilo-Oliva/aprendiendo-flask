@@ -44,3 +44,17 @@ class MainTest(TestCase):
         }
         response = self.client.post(url_for("show_information"), data=test_form_fake)
         self.assertRedirects(response, url_for("index", _external=True))
+        
+    #testeamos de que el blueprint existe
+    def test_auth_blueprin_exists_module(self):
+        self.assertIn("auth", self.app.blueprints)
+    
+    #testeamos la ruta del blueprint
+    def test_auth_blueprint_get(self):
+        response = self.client.get(url_for("auth.login")) #esto porque nos referimos a la funcion de un blueprint
+        self.assert200(response)
+    
+    #testeamos si el blueprint del login está siendo renderizado
+    def test_auth_blueprint_login_template(self):
+        self.client.get(url_for("auth.login"))
+        self.assertTemplateUsed("login.html")
