@@ -61,5 +61,7 @@ Iré subiendo aquí todo mi código, ejercicios y pruebas a medida que avance en
 >Escribir los tests: Cuando corremos el *flask test* busca en la carpeta test todos los archivos que empiezan con dicha palabra. En el *test_app* vamos a escribir el algoritmo necesario para probar la aplicación web.
 
 >AssertRedirect: Tuve que agregar el *_external=True* debido a que el test busca URLs absolutas, sin el external es relativa
+
+>Modularizar: Ahora tenemos todo en el main.py y por ende no es escalable. Entonces vamos a dividir todo para que sea más mantenible en el tiempo. El *__init__.py* significa que es un paquete de python, por eso vamos a poder usar todas las funciones. Esta modularización va a hacer que los tests solo muestren errores, para solucionar esto vamos a mover todas las carpetas de static y templates a la carpeta app.
 ---
 *Repositorio de Danilo.*

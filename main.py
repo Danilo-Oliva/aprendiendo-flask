@@ -1,5 +1,4 @@
 from flask import (
-    Flask,
     request,
     make_response,
     redirect,
@@ -8,30 +7,19 @@ from flask import (
     url_for,
     flash,
 )
-from flask_bootstrap import Bootstrap
-from flask_wtf import FlaskForm
-from wtforms.fields import StringField, PasswordField, SubmitField
-from wtforms.validators import DataRequired
 import unittest
+from app import create_app
+from app.forms import LoginForm
 
-app = Flask(__name__)
-bootstap = Bootstrap(app)
-app.config["SECRET_KEY"] = "CLAVE SEGURA"
+app = create_app()
 
 items = ["Arroz", "Huevos", "Café", "Leche"]
-
 
 # creamos un comando propio de flask para ejecutarlo desde consola
 @app.cli.command()
 def test():
     tests = unittest.TestLoader().discover("tests")
     unittest.TextTestRunner().run(tests)
-
-
-class LoginForm(FlaskForm):
-    username = StringField("Nombre del usuario", validators=[DataRequired()])
-    password = PasswordField("Contraseña", validators=[DataRequired()])
-    submit = SubmitField("Enviar datos")
 
 
 @app.errorhandler(404)
