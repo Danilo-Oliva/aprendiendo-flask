@@ -38,12 +38,11 @@ class MainTest(TestCase):
     
     #testeamos el post, pero el post devuelve datos, por eso agregamos data    
     def test_show_information_post(self):
-        test_form_fake = {
-            "username": "Danilo",
-            "password": "123456",
-        }
-        response = self.client.post(url_for("show_information"), data=test_form_fake)
-        self.assertRedirects(response, url_for("index", _external=True))
+        """
+
+        """
+        response = self.client.post(url_for("show_information"))
+        self.assert405(response, url_for("index", _external=True))#405 significa si fue autorizado
         
     #testeamos de que el blueprint existe
     def test_auth_blueprin_exists_module(self):
@@ -58,3 +57,12 @@ class MainTest(TestCase):
     def test_auth_blueprint_login_template(self):
         self.client.get(url_for("auth.login"))
         self.assertTemplateUsed("login.html")
+    
+    #testeamos el metodo post de la ruta del blueprint del login
+    def test_auth_blueprint_login_post(self):
+        test_form_fake = {
+            "username": "Danilo",
+            "password": "123456",
+        }
+        response = self.client.post(url_for("auth.login"), data=test_form_fake)
+        self.assertRedirects(response, url_for("index"))
